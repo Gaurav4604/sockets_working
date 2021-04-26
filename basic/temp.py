@@ -6,6 +6,7 @@ PORT = 12345
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
     for i in range(5):
-        s.sendall(bytearray(f'Hello this is msg {i}','utf8'))
+        a = input("enter your data: ")
+        s.sendall(bytearray(f'{a}','utf8'))
         data = s.recv(1024).decode('utf-8')
         print(f'Recieved {data}')
