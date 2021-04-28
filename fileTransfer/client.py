@@ -28,3 +28,4 @@ with open(filename, 'rb') as f:
             sock.sendall(bytes_read)
 
 sock.close()
+# https://stackoverflow.com/questions/20820602/image-send-via-tcp
