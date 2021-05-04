@@ -1,5 +1,6 @@
 import socket
 import os
+import time
 
 SEPARATOR = "<SEPARATOR>"
 
@@ -11,13 +12,15 @@ port = 12345
 # client socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-filename = "../Churn.csv"
+filename = "../Churn.txt"
 filesize = os.path.getsize(filename)
-
+print(filesize)
 print("[INFO] connecting to socket")
 sock.connect((host, port))
 
 sock.sendall(f"{filename}{SEPARATOR}{filesize}".encode())
+
+time.sleep(0.15)
 
 with open(filename, 'rb') as f:
     while True:

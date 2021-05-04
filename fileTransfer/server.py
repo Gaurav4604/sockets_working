@@ -20,7 +20,8 @@ recieved = conn.recv(BUFFER_SIZE).decode()
 filename, filesize = recieved.split(SEPARATOR)
 filename = os.path.basename(filename)
 
-filesize = int(filesize)
+# filesize = int(filesize)
+print(filesize, filename)
 
 
 with open(filename, 'wb') as f:
