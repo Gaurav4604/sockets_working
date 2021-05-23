@@ -4,7 +4,7 @@ import time
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # telling the socket connection to connect via TCP protocol
 
-HOST = '192.168.1.16'
+HOST = '192.168.1.12'
 PORT = 12345
 conn_check_list = []
 sock.bind((HOST, PORT))

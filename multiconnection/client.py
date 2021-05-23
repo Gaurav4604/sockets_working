@@ -2,7 +2,7 @@ import socket
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-HOST = '192.168.1.16'
+HOST = '192.168.1.12'
 PORT = 12345
 
 print('[INFO] waiting for server response')

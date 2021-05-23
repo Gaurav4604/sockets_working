@@ -1,11 +1,11 @@
 import socket
 
-HOST = '127.0.0.1'
+HOST = '172.20.10.13' # IPv4 Address
 PORT = 12345
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.bind((HOST, PORT))
-    s.listen()
+    s.listen(10)
     print('socket initialized')
     conn, addr = s.accept()
     count = 0
